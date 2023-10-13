@@ -1,0 +1,17 @@
+name: When Deleted Refs
+on: delete
+
+jobs:
+    show-meta-refs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - name: Show meta refs
+              run: |
+                  ORIGINAL_BRANCH_NAME=${GITHUB_REF_NAME}
+                  ORIGINAL_REF=${GITHUB_REF}
+                  echo "ORIGINAL_BRANCH_NAME: ${ORIGINAL_BRANCH_NAME}"
+                  echo "ORIGINAL_REF: ${ORIGINAL_REF}"
