@@ -3,6 +3,7 @@ on:
     delete:
         branches-ignore:
             - "ignored-branch"
+            - "main"
 
 jobs:
     show-meta-refs:
