@@ -1,5 +1,8 @@
 name: When Deleted Refs
-on: delete
+on:
+    delete:
+        branches-ignore:
+            - "ignored-branch"
 
 jobs:
     show-meta-refs:
